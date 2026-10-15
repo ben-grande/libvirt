@@ -5769,6 +5769,8 @@ typedef enum {
  * Since: 0.5.0
  */
 typedef enum {
+    /* TODO: ben: don't submit this upstream */
+    VIR_DOMAIN_EVENT_STOPPED_REBOOT = 8,    /* Host or guest requested reboot */
     VIR_DOMAIN_EVENT_STOPPED_SHUTDOWN = 0,  /* Normal shutdown (Since: 0.5.0) */
     VIR_DOMAIN_EVENT_STOPPED_DESTROYED = 1, /* Forced poweroff from host (Since: 0.5.0) */
     VIR_DOMAIN_EVENT_STOPPED_CRASHED = 2,   /* Guest crashed (Since: 0.5.0) */

@@ -1779,7 +1779,9 @@ virDomainShutdownFlags(virDomainPtr domain, unsigned int flags)
  * Note that the guest OS may ignore the request.
  * Additionally, the hypervisor may check and support the domain
  * 'on_reboot' XML setting resulting in a domain that shuts down instead
- * of rebooting.
+ * of rebooting. Depending on the hypervisor and 'on_reboot' setting,
+ * VIR_DOMAIN_EVENT_ID_REBOOT might be emitted. For more information, see
+ * https://libvirt.org/formatdomain.html#events-configuration
  *
  * If @flags is set to zero, then the hypervisor will choose the
  * method of shutdown it considers best. To have greater control
